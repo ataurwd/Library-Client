@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/AuthContext";
 
-
 const NavBer = () => {
   const { user, logoutUser } = useContext(UserContext);
   const navigate = useNavigate();
@@ -12,9 +11,7 @@ const NavBer = () => {
     navigate("/login");
   };
   return (
-    <div
-      className='navbar md:px-20 relative'
-    >
+    <div className="navbar md:px-20 sticky bg-white/80 z-50 top-0">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,42 +34,60 @@ const NavBer = () => {
             tabIndex={0}
             className={`z-50 menu menu-sm dropdown-content rounded-boxmt-3 w-52 p-2 shadow bg-white `}
           >
-<NavLink
-            to={"/"}
-            className={({ isActive }) =>
-              `${isActive ? "text-gray-400 underline underline-offset-4" : ""}`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to={"/all-books"}
-            className={({ isActive }) =>
-              `${isActive ? "text-gray-400 underline underline-offset-4" : ""}`
-            }
-          >
-            All Books
-          </NavLink>
-          <NavLink
-            to={"/add-books"}
-            className={({ isActive }) =>
-              `${isActive ? "text-gray-400 underline underline-offset-4" : ""}`
-            }
-          >
-            Add Book
-          </NavLink>
-          <NavLink
-            to={"/browse-books"}
-            className={({ isActive }) =>
-              `${isActive ? "text-gray-400 underline underline-offset-4" : ""}`
-            }
-          >
-            Borrowed Books
-          </NavLink>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-gray-400 underline underline-offset-4" : ""
+                }`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to={"/all-books"}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-gray-400 underline underline-offset-4" : ""
+                }`
+              }
+            >
+              All Books
+            </NavLink>
+            <NavLink
+              to={"/add-books"}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-gray-400 underline underline-offset-4" : ""
+                }`
+              }
+            >
+              Add Book
+            </NavLink>
+            <NavLink
+              to={"/browse-books"}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-gray-400 underline underline-offset-4" : ""
+                }`
+              }
+            >
+              Borrowed Books
+            </NavLink>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-gray-400 underline underline-offset-4" : ""
+                }`
+              }
+            >
+              Contact
+            </NavLink>
           </ul>
         </div>
         <Link to={"/"} className="font-semibold text-xl">
-        BookQuill
+          BookQuill
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -111,6 +126,14 @@ const NavBer = () => {
           >
             Borrowed Books
           </NavLink>
+          <NavLink
+            to={"/contact"}
+            className={({ isActive }) =>
+              `${isActive ? "text-gray-400 underline underline-offset-4" : ""}`
+            }
+          >
+            Contact
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end flex items-center space-x-4">
@@ -145,7 +168,7 @@ const NavBer = () => {
               </button>
             </Link>
           </>
-         )}
+        )}
       </div>
     </div>
   );

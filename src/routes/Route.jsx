@@ -13,6 +13,7 @@ import UpdateBooks from "../components/UpdateBooks";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../components/Details";
 import ErrorPage from "../components/ErrorPage";
+import Contact from "../pages/Contact";
 
 const Route = () => {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const Route = () => {
         {
           path: "/register",
           element: <Register />,
+        },
+        {
+          path: '/contact',
+          element: <Contact/>
         },
         {
           path: "/all-books",

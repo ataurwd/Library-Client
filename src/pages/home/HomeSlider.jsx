@@ -28,7 +28,7 @@ const HomeSlider = () => {
     
   return (
     <div>
-      <AwesomeSlider bullets={false} style={{ height: "90vh" }}>
+      <AwesomeSlider bullets={false} style={{ height: "80vh" }}>
         {slides.map((slide) => (
           <div
             key={slide.id}
@@ -60,7 +60,7 @@ const HomeSlider = () => {
               }}
             />
             {/* Content */}
-            <div className="relative z-20">
+            <div className="relative z-20 -top-16">
               <h1 className="md:text-5xl text-2xl mb-4 px-5 font-bold text-white">
                 {slide.title}
               </h1>

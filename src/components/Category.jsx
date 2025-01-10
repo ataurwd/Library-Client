@@ -26,7 +26,7 @@ const categories = [
 
 const App = () => {
   return (
-    <div className="lg:px-20 md:px-14 px-4 lg:my-10 md:my-6 my-3">
+    <div className="lg:px-20 md:px-14 px-4 lg:my-0 md:my-6 my-3">
       <h1 className="text-3xl font-semibold font-customRubik text-primary underline">
         Featured Categories
       </h1>

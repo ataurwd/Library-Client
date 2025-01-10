@@ -5,6 +5,10 @@ import BestSeles from "./BestSeles";
 import Fetures from "./Fetures";
 
 import { Helmet } from "react-helmet";
+import FollowSteps from "../../components/FollowSteps";
+import Review from "../../components/Review";
+import { FcAbout } from "react-icons/fc";
+import About from './../../components/About';
 
 const Home = () => {
   return (
@@ -13,9 +17,12 @@ const Home = () => {
         <title>BookQuill | Home</title>
       </Helmet>
       <HomeSlider />
+      <Fetures />
+      <About/>
       <Category />
       <BestSeles />
-      <Fetures />
+      <FollowSteps />
+      <Review/>
     </div>
   );
 };
